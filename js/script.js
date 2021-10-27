@@ -41,23 +41,28 @@ const up = document.querySelector(".up");
 const down = document.querySelector(".down");
 // console.log(down);
 
-down.addEventListener("click", function(){
+up.addEventListener("click", function(){
+    items[contatore].classList.remove ("active");
+    mitems[contatore].classList.remove ("active-mini");
     contatore--;
     if (contatore < 0) {
         contatore = items.length -1;
     }
    console.log(contatore);
-
+   items[contatore].classList.add("active");
+   mitems[contatore].classList.add("active-mini");
 });
 
-up.addEventListener("click", function(){
+down.addEventListener("click", function(){
+    items[contatore].classList.remove ("active");
+    mitems[contatore].classList.remove ("active-mini");
     contatore++;
     if (contatore > items.length - 1) {
         contatore = 0;
     }
-
-    console.log(contatore);
-
+    console.log(items[contatore]);
+    items[contatore].classList.add("active");
+   mitems[contatore].classList.add("active-mini");
 });
 
 
