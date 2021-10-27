@@ -57,7 +57,27 @@ for(let i= 0; i < items.length; i++){
     slideV.append(item); 
 }
 
+for(let i= 0; i < items.length; i++){
+   
+    const titolo = document.createElement("h1");
+    titolo.className = "titolo";
+    if (i === contatore) {
+       titolo.classList.add("active"); 
+    }
+    titolo.innerHTML = title[i];
+    slideO.append(titolo); 
+}
 
+for(let i= 0; i < items.length; i++){
+   
+    const paragrafo = document.createElement("p");
+    paragrafo.className = "paragrafo";
+    if (i === contatore) {
+       paragrafo.classList.add("active"); 
+    }
+    paragrafo.innerHTML = text[i];
+    slideO.append(paragrafo); 
+}
 
 up.addEventListener("click", function(){
     

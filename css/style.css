@@ -9,7 +9,7 @@
 }
 
 .slide-orizzontali{
-    
+    position: relative;
     min-width: 300px;
     width: 80%;
     min-height: 300px;
@@ -22,7 +22,16 @@
     min-height: 300px;
 }
 
-.testo{
+.titolo{
+    display: none;
+    color: white;
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+}
+
+.paragrafo{
+    display: none;
     color: white;
     position: absolute;
     bottom: 10px;
@@ -36,6 +45,14 @@
 
 .item.active{
     display: block;
+}
+
+.titolo.active{
+    display: inline-block;
+}
+
+.paragrafo.active{
+    display: inline-block;
 }
 
 .slide-verticali{
