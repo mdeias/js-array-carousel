@@ -26,12 +26,14 @@ const text = [
 ]
 
 // Variabili necessarie 
-
+const contentO = document.getElementsByClassName ("item");
+const contentV = document.getElementsByClassName ("mini-item");
 const slideO = document.querySelector(".slide-orizzontali");
 const slideV = document.querySelector(".slide-verticali");
-let contatore = 0;
+let contatore = 3;
 const up = document.querySelector(".up");
 const down = document.querySelector(".down");
+
 
 for(let i= 0; i < items.length; i++){
     console.log(items[i]);
@@ -58,27 +60,28 @@ for(let i= 0; i < items.length; i++){
 
 
 up.addEventListener("click", function(){
-    item[contatore].classList.remove ("active");
-    item[contatore].classList.remove ("active-mini");
+    
+    contentO[contatore].classList.remove ("active");
+    contentV[contatore].classList.remove ("active-mini");
     contatore--;
     if (contatore < 0) {
         contatore = items.length -1;
     }
 //    console.log(contatore);
-   item[contatore].classList.add("active");
-   item[contatore].classList.add("active-mini");
+   contentO[contatore].classList.add("active");
+   contentV[contatore].classList.add("active-mini");
 });
 
 down.addEventListener("click", function(){
-    items[contatore].classList.remove ("active");
-    mitems[contatore].classList.remove ("active-mini");
+    contentO[contatore].classList.remove ("active");
+    contentV[contatore].classList.remove ("active-mini");
     contatore++;
     if (contatore > items.length - 1) {
         contatore = 0;
     }
     // console.log(items[contatore]);
-    item[contatore].classList.add("active");
-   items[contatore].classList.add("active-mini");
+    contentO[contatore].classList.add("active");
+    contentV[contatore].classList.add("active-mini");
 });
 
 
