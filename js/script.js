@@ -1,45 +1,39 @@
 // ARRAY 
 
 
-// const items = [
-//     'img/01.jpg',
-//     'img/02.jpg',
-//     'img/03.jpg',
-//     'img/04.jpg',
-//     'img/05.jpg'
-// ];
+const items = [
+    'img/01.jpg',
+    'img/02.jpg',
+    'img/03.jpg',
+    'img/04.jpg',
+    'img/05.jpg'
+];
 
-// const title = [
-//     'Svezia',
-//     'Svizzera',
-//     'Gran Bretagna',
-//     'Germania',
-//     'Paradise'
-// ]
+const title = [
+    'Svezia',
+    'Svizzera',
+    'Gran Bretagna',
+    'Germania',
+    'Paradise'
+]
 
-// const text = [
-//     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-//     'Lorem ipsum',
-//     'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-//     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-//     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-// ]
-
-
-// SCRIPT CON HTML COLLECTION
+const text = [
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+    'Lorem ipsum',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+]
 
 // Variabili necessarie 
 
-const items = document.getElementsByClassName("item");
-// console.log(items);
-const mitems = document.getElementsByClassName("mini-item");
-// console.log(minItems);
+const slideO = querySelector(".slide-orizzontali");
+const slideV = querySelector(".slide-verticali");
 let contatore = 0;
-// console.log(contatore);
 const up = document.querySelector(".up");
-// console.log(up);
 const down = document.querySelector(".down");
-// console.log(down);
+
+
 
 up.addEventListener("click", function(){
     items[contatore].classList.remove ("active");
