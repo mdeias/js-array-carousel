@@ -28,6 +28,8 @@ const text = [
 // Variabili necessarie 
 const contentO = document.getElementsByClassName ("item");
 const contentV = document.getElementsByClassName ("mini-item");
+const testoTitolo = document.getElementsByClassName ("titolo");
+const testoParagrafo = document.getElementsByClassName ("paragrafo");
 const slideO = document.querySelector(".slide-orizzontali");
 const slideV = document.querySelector(".slide-verticali");
 let contatore = 3;
@@ -57,23 +59,23 @@ for(let i= 0; i < items.length; i++){
     slideV.append(item); 
 }
 
-for(let i= 0; i < items.length; i++){
+for(let i= 0; i < title.length; i++){
    
     const titolo = document.createElement("h1");
     titolo.className = "titolo";
     if (i === contatore) {
-       titolo.classList.add("active"); 
+       titolo.classList.add("active-t"); 
     }
     titolo.innerHTML = title[i];
     slideO.append(titolo); 
 }
 
-for(let i= 0; i < items.length; i++){
+for(let i= 0; i < text.length; i++){
    
     const paragrafo = document.createElement("p");
     paragrafo.className = "paragrafo";
     if (i === contatore) {
-       paragrafo.classList.add("active"); 
+       paragrafo.classList.add("active-p"); 
     }
     paragrafo.innerHTML = text[i];
     slideO.append(paragrafo); 
@@ -83,6 +85,8 @@ up.addEventListener("click", function(){
     
     contentO[contatore].classList.remove ("active");
     contentV[contatore].classList.remove ("active-mini");
+    testoTitolo[contatore].classList.remove ("active-t");
+    testoParagrafo[contatore].classList.remove ("active-p");
     contatore--;
     if (contatore < 0) {
         contatore = items.length -1;
@@ -90,11 +94,15 @@ up.addEventListener("click", function(){
 //    console.log(contatore);
    contentO[contatore].classList.add("active");
    contentV[contatore].classList.add("active-mini");
+   testoTitolo[contatore].classList.add ("active-t");
+   testoParagrafo[contatore].classList.add ("active-p");
 });
 
 down.addEventListener("click", function(){
     contentO[contatore].classList.remove ("active");
     contentV[contatore].classList.remove ("active-mini");
+    testoTitolo[contatore].classList.remove ("active-t");
+    testoParagrafo[contatore].classList.remove ("active-p");
     contatore++;
     if (contatore > items.length - 1) {
         contatore = 0;
@@ -102,6 +110,8 @@ down.addEventListener("click", function(){
     // console.log(items[contatore]);
     contentO[contatore].classList.add("active");
     contentV[contatore].classList.add("active-mini");
+    testoTitolo[contatore].classList.add ("active-t");
+    testoParagrafo[contatore].classList.add ("active-p");
 });
 
 

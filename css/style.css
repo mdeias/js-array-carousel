@@ -26,7 +26,7 @@
     display: none;
     color: white;
     position: absolute;
-    bottom: 70px;
+    bottom: 90px;
     left: 10px;
 }
 
@@ -47,11 +47,11 @@
     display: block;
 }
 
-.titolo.active{
+.titolo.active-t{
     display: inline-block;
 }
 
-.paragrafo.active{
+.paragrafo.active-p{
     display: inline-block;
 }
 
