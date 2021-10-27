@@ -1,0 +1,36 @@
+
+.contenitore{
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-orizzontali{
+    width: 80%;
+    min-width: 300px;
+}
+
+.item img{
+    width: 100%;
+}
+
+.item{
+    display: none;
+}
+
+.item.active{
+    display: block;
+}
+
+.slide-verticali{
+    width: 20%;
+    height: 300px;
+    overflow: auto;
+}
+
+.slide-verticali img{
+    width: 100%;
+}
