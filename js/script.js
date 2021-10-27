@@ -42,9 +42,22 @@ const down = document.querySelector(".down");
 // console.log(down);
 
 down.addEventListener("click", function(){
-    items[contatore].classList.remove ("active");
-    mitems[contatore].classList.remove ("active-mini");
-    // console.log(mitems[contatore]);
-})
+    contatore--;
+    if (contatore < 0) {
+        contatore = items.length -1;
+    }
+   console.log(contatore);
+
+});
+
+up.addEventListener("click", function(){
+    contatore++;
+    if (contatore > items.length - 1) {
+        contatore = 0;
+    }
+
+    console.log(contatore);
+
+});
 
 
