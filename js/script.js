@@ -27,24 +27,46 @@ const text = [
 
 // Variabili necessarie 
 
-const slideO = querySelector(".slide-orizzontali");
-const slideV = querySelector(".slide-verticali");
+const slideO = document.querySelector(".slide-orizzontali");
+const slideV = document.querySelector(".slide-verticali");
 let contatore = 0;
 const up = document.querySelector(".up");
 const down = document.querySelector(".down");
 
+for(let i= 0; i < items.length; i++){
+    console.log(items[i]);
+    const item = document.createElement("div");
+    item.className = "item";
+    if (i === contatore) {
+       item.classList.add("active"); 
+    }
+    item.innerHTML = `<img src="${items[i]}" alt="">`;
+    slideO.append(item); 
+}
+
+for(let i= 0; i < items.length; i++){
+    console.log(items[i]);
+    const item = document.createElement("div");
+    item.className = "mini-item";
+    if (i === contatore) {
+       item.classList.add("active-mini"); 
+    }
+    item.innerHTML = `<img src="${items[i]}" alt="">`;
+    slideV.append(item); 
+}
+
 
 
 up.addEventListener("click", function(){
-    items[contatore].classList.remove ("active");
-    mitems[contatore].classList.remove ("active-mini");
+    item[contatore].classList.remove ("active");
+    item[contatore].classList.remove ("active-mini");
     contatore--;
     if (contatore < 0) {
         contatore = items.length -1;
     }
-   console.log(contatore);
-   items[contatore].classList.add("active");
-   mitems[contatore].classList.add("active-mini");
+//    console.log(contatore);
+   item[contatore].classList.add("active");
+   item[contatore].classList.add("active-mini");
 });
 
 down.addEventListener("click", function(){
@@ -54,9 +76,9 @@ down.addEventListener("click", function(){
     if (contatore > items.length - 1) {
         contatore = 0;
     }
-    console.log(items[contatore]);
-    items[contatore].classList.add("active");
-   mitems[contatore].classList.add("active-mini");
+    // console.log(items[contatore]);
+    item[contatore].classList.add("active");
+   items[contatore].classList.add("active-mini");
 });
 
 

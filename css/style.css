@@ -65,7 +65,7 @@
 }
 
 .up, .down{
-    
+    z-index: 10;
     position: absolute;
     color: black;
     text-align: center;
