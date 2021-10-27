@@ -24,3 +24,27 @@
 //     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 //     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 // ]
+
+
+// SCRIPT CON HTML COLLECTION
+
+// Variabili necessarie 
+
+const items = document.getElementsByClassName("item");
+// console.log(items);
+const mitems = document.getElementsByClassName("mini-item");
+// console.log(minItems);
+let contatore = 0;
+// console.log(contatore);
+const up = document.querySelector(".up");
+// console.log(up);
+const down = document.querySelector(".down");
+// console.log(down);
+
+down.addEventListener("click", function(){
+    items[contatore].classList.remove ("active");
+    mitems[contatore].classList.remove ("active-mini");
+    // console.log(mitems[contatore]);
+})
+
+

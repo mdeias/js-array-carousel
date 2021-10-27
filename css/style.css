@@ -59,12 +59,13 @@
     filter: grayscale(1);
 }
 
-.mini-item.active{
+.mini-item.active-mini{
     filter: grayscale(0);
     border: 1px solid white;
 }
 
 .up, .down{
+    
     position: absolute;
     color: black;
     text-align: center;
