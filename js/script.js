@@ -25,7 +25,7 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
-// Variabili necessarie 
+// Variabili 
 const contentO = document.getElementsByClassName ("item");
 const contentV = document.getElementsByClassName ("mini-item");
 const testoTitolo = document.getElementsByClassName ("titolo");
@@ -36,7 +36,7 @@ let contatore = 3;
 const up = document.querySelector(".up");
 const down = document.querySelector(".down");
 
-
+// ciclo immagini orizzontali
 for(let i= 0; i < items.length; i++){
     console.log(items[i]);
     const item = document.createElement("div");
@@ -47,6 +47,8 @@ for(let i= 0; i < items.length; i++){
     item.innerHTML = `<img src="${items[i]}" alt="">`;
     slideO.append(item); 
 }
+
+// ciclo immagini verticali
 
 for(let i= 0; i < items.length; i++){
     console.log(items[i]);
@@ -59,6 +61,8 @@ for(let i= 0; i < items.length; i++){
     slideV.append(item); 
 }
 
+// ciclo titoli
+
 for(let i= 0; i < title.length; i++){
    
     const titolo = document.createElement("h1");
@@ -70,6 +74,8 @@ for(let i= 0; i < title.length; i++){
     slideO.append(titolo); 
 }
 
+// ciclo paragrafi
+
 for(let i= 0; i < text.length; i++){
    
     const paragrafo = document.createElement("p");
@@ -80,6 +86,8 @@ for(let i= 0; i < text.length; i++){
     paragrafo.innerHTML = text[i];
     slideO.append(paragrafo); 
 }
+
+// click
 
 up.addEventListener("click", function(){
     
