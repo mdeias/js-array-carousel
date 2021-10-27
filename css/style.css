@@ -22,8 +22,16 @@
     min-height: 300px;
 }
 
+.testo{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
 .item{
     display: none;
+    position: relative;
 }
 
 .item.active{
@@ -31,7 +39,8 @@
 }
 
 .slide-verticali{
-    
+    position: relative;
+    height: 400px;
     min-height: 300px;
     width: 20%;
     min-width: 100px;
@@ -53,4 +62,28 @@
 .mini-item.active{
     filter: grayscale(0);
     border: 1px solid white;
+}
+
+.up, .down{
+    position: absolute;
+    color: black;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .5);
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    left: 44%;
+    cursor: pointer;
+}
+
+.up{
+    top: 10px;
+}
+
+.down{
+    bottom: 10px;
+}
+
+.up:hover, .down:hover{
+    background-color: #fff;
 }
